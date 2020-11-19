@@ -16,7 +16,7 @@ Login
             <div class="form-header">Login</div>
 
             <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                <label for="email" class="col-md-4 col-form-label text-md-right">Email Address</label>
 
                 <div class="col-md-6">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" style="width: auto;" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -58,7 +58,7 @@ Login
             <div class="form-group row mb-0">
                 <div class="col-md-8 offset-md-4">
                     <button type="submit" class="btn btn-primary">
-                        {{ __('Login') }}
+                        Login
                     </button>
 
                     @if (Route::has('password.request'))
