@@ -44,8 +44,6 @@ Route::resource('/orders', 'OrderController')->middleware('auth');
 
 
 
-
-
 Route::get('/admin', 'Admin\DashboardController@resources', function () {
     return view('admin.dashboard');
 });

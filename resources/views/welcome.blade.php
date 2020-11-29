@@ -8,88 +8,24 @@ Mikes_Burgers
 @section('content')
 
 
-
-
-
-
 <body style="margin: 0px;">
-    <!-- <ul>
-        <img src="{{asset('img/burger_logo.png')}}" width="150px;" height="100px;" alt="" style="margin-left: 10px" />
-        @if (Route::has('login'))
-        <li>
-            @auth
-            <a href="{{ url('/home') }}">Home</a>
-            <a href="{{ url('#burgers') }}">Menu</a>
 
-            <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="{{asset('img/burger-video3.mp4')}}" type="video/mp4">
+        </video>
+        <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+              <h2 class="display-4">🤩 Welcome to <em>Mike's Burgers</em> 🤩</h2>
+              {{-- <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p> --}}
+              <a href="{{ url('#burgers') }}" class="btn" style="background-color: lightblue;">View our menu >></a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-            <a style="padding: 20px; background-color:#4ebafe" disabled>
-                {{ Auth::user()->name }} <span class="caret"></span>
-            </a>
-
-            @else
-            <a href="{{ url('#burgers') }}">Menu</a>
-
-            <a href="{{ route('login') }}">Login</a>
-
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}">Register</a>
-            @endif
-            @endif
-        </li>
-        @endif
-
-    </ul> -->
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://cdn.pixabay.com/photo/2016/11/19/12/44/burgers-1839090__480.jpg" height="750px;" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>
-                        <p style="color: white; text-align: center; font-size: 30px">
-                            🤩 Welcome to <em>Burger Place</em> 🤩
-                        </p>
-                    </h5>
-                    <h4>👨🏽‍🍳 For the best burgers in town 🍔</h4>
-
-                </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://cdn.pixabay.com/photo/2017/11/06/21/42/burger-2924978__480.jpg" height="750px;" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>We have amazing offers and deals for you.</h5>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://cdn.pixabay.com/photo/2020/09/16/20/59/hamburger-5577498__480.jpg" height="750px;" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Get your burgers at affordable prices.</h5>
-
-                </div>
-            </div>
+          </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+      </header>
 
 
     <section id="burgers">
@@ -128,39 +64,6 @@ Mikes_Burgers
                     </div>
                 </div>
                 @endforeach
-                <!-- <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRO5N0fw6rEg9-s6cXzZsxQemb6n8w8vB60fQ&usqp=CAU" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Beef Burger </a>
-                            </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                            @if (Route::has('login'))
-                            @auth
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Quantity:</span>
-                                </div>
-                                <input type="text" class="form-control" name="quantity">
-                                <div class="input-group-append">
-                                    <span class="input-group-text"></span>
-                                </div>
-                            </div>
-                            <a class="btn btn-primary btn-lg" href="{{ route('login') }}">Purchase</a>
-                            @else
-
-                            <a class="btn btn-primary btn-lg" href="{{ route('login') }}">Sign in to purchase</a>
-                            @endif
-                            @endif
-                        </div>
-                    </div>
-                </div> -->
-
-
-
-
-
 
             </div>
     </section>
@@ -179,6 +82,88 @@ Mikes_Burgers
     html {
         scroll-behavior: smooth;
     }
+
+    .btn {
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+
+    header {
+  position: relative;
+  background-color: black;
+  height: 86vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
 
     .footer {
         padding-top: 20px;

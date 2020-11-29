@@ -50,7 +50,7 @@ class OrderController extends Controller
 
         $order = new Order();
 
-        $order->order_number = uniqid('OrderNo-');
+        $order->order_number = uniqid('OrderNumber-');
 
         $order->shipping_fullname = $request->input('shipping_fullname');
         $order->shipping_city = $request->input('shipping_city');
