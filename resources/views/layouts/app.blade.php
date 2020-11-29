@@ -21,6 +21,9 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    {{-- Icons --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -64,11 +67,18 @@
                         </li>
                         @endif
                         @else
-                        <li class="nav-item">
+
+                        {{-- <li class="nav-item">
                             <a class="nav-link" style="color: white;" href="{{  asset('/') }}">Home</a>
+                        </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="{{ url('/') }}">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="{{ url('#burgers') }}">Menu</a>
+                            <a class="nav-link" style="color: white;" href="{{  route('cart.index') }}">
+                                <i class="fa fa-shopping-cart text-success" aria-hidden="true"></i>
+                                Cart ({{Cart::session(auth()->id())->getContent()->count()}})
+                            </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color:white;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -116,7 +126,7 @@
     li a {
         padding: 15px;
         border-radius: 10px;
-        background-color: ;
+        /* background-color: ; */
         margin: 10px;
     }
 </style>

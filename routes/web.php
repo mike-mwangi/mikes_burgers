@@ -33,15 +33,14 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
     Route::get('/viewBurger', 'BurgerController@index');
 });
 
+Route::get('/add-to-cart/{burger}', 'CartController@edit')->name('cart.edit')->middleware('auth');
+Route::get('/cart', 'CartController@index')->name('cart.index')->middleware('auth');
+Route::get('/cart/destroy/{burgerId}', 'CartController@destroy')->name('cart.destroy')->middleware('auth');
+Route::get('/cart/update/{burger}', 'CartController@update')->name('cart.update')->middleware('auth');
+Route::get('/cart/checkout', 'CartController@checkout')->name('cart.checkout')->middleware('auth');
 
 
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
-    // Route::get('/burgers', 'BurgerController@create');
-    // Route::post('/addBurger','BurgerController@addBurger');
-    // Route::get('/viewBurger','BurgerController@index');
-
-
-});
+Route::resource('/orders', 'OrderController')->middleware('auth');
 
 
 

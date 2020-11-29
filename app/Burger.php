@@ -12,6 +12,6 @@ class Burger extends Model
         'burger_name,
         burger_description,
         burger_price,
-        burger_image'
+        burger_image',
     ];
 }

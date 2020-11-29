@@ -64,8 +64,8 @@ dashboard | Mikes_Burgers
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h5 class="card-title text-uppercase text-muted mb-0">Feedback</h5>
-                        <span class="h2 font-weight-bold mb-0">8</span>
+                        <h5 class="card-title text-uppercase text-muted mb-0">Orders</h5>
+                        <span class="h2 font-weight-bold mb-0">{{$orderCount}}</span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-info text-white rounded-circle shadow">

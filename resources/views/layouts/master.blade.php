@@ -68,9 +68,9 @@
 
 
                     <li>
-                        <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{asset('/orders')}}">
                             <i class="nc-icon nc-notes"></i>
-                            <p>Feedback</p>
+                            <p>Orders</p>
                         </a>
                     </li>
 

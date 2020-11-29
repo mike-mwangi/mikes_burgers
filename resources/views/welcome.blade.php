@@ -118,7 +118,7 @@ Mikes_Burgers
                             </div>
                             @auth
 
-                            <a class="btn btn-primary btn-lg" href="{{ route('login') }}">Purchase</a>
+                            <a class="btn btn-primary btn-lg" href="{{route('cart.edit', $burger)}}">Add to cart</a>
                             @else
 
                             <a class="btn btn-primary btn-lg" href="{{ route('login') }}">Sign in to purchase</a>
